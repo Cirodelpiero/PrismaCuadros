@@ -1,0 +1,101 @@
+[
+    {
+        "id": 1,
+        "nombre": "Taza Nirvana",
+        "precio": 19,
+        "stock": 12,
+        "banda": "Nirvana",
+        "imagen_principal": "tazaNirvana.jpg",
+        "capacidad": "L",
+        "material": "plastico"
+        
+    },
+     {
+        "id": 2,
+        "nombre": "Taza Blur",
+        "precio": 19,
+        "stock": 12,
+        "banda": "Blur",
+        "imagen_principal": "tazaBlur.jpg",
+        "capacidad": 250,
+        "material": "ceramica"
+        
+    },
+    {
+        "id": 3,
+        "nombre": "Taza Korn",
+        "precio": 199,
+        "stock": 120,
+        "banda": "Korn",
+        "imagen_principal": "tazaKorn.jpg",
+        "capacidad": 250,
+        "material": "plastico"
+        
+    },
+    {
+        "id": 4,
+        "nombre": "Taza RadioHead",
+        "precio": 19,
+        "stock": 12,
+        "banda": "RadioHead",
+        "imagen_principal": "tazaRadio.jpg",
+        "capacidad": 500,
+        "material": "ceramica"
+        
+    },
+    {
+        "id": 5,
+        "nombre": "Taza Red Hot Chili Peppers",
+        "precio": 159,
+        "stock": 12,
+        "banda": "Red Hot Chili Peppers",
+        "imagen_principal": "tazaRedhot.png",
+        "capacidad": 250,
+        "material": "ceramica"
+        
+    },
+    {
+        "id": 6,
+        "nombre": "Taza Soda Stereo",
+        "precio": 229,
+        "stock": 12,
+        "banda": "Soda Stereo",
+        "imagen_principal": "tazaSoda.jpg",
+        "capacidad": 500,
+        "material": "ceramica"
+        
+    },
+    {
+        "id": 7,
+        "nombre": "Taza Stone Temple Pilots",
+        "precio": 19,
+        "stock": 12,
+        "banda": "Stone Temple Pilots",
+        "imagen_principal": "tazaStoneTemple.jpg",
+        "capacidad": 250,
+        "material": "ceramica"
+        
+    },
+    {
+        "id": 8,
+        "nombre": "Taza Rolling Stones",
+        "precio": 19,
+        "stock": 12,
+        "banda": "Rolling Stones",
+        "imagen_principal": "tazaRolling.jpg",
+        "capacidad": 250,
+        "material": "ceramica"
+        
+    },
+    {
+        "id": 9,
+        "nombre": "Taza Queen ",
+        "precio": 19,
+        "stock": 12,
+        "banda": "Queen",
+        "imagen_principal": "tazaQueen.jpg",
+        "capacidad": 250,
+        "material": "ceramica"
+        
+    }
+]

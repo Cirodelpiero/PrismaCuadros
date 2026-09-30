@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "nombre": "Remera Nirvana",
+        "precio": 199,
+        "stock": 12,
+        "banda": "Nirvana",
+        "imagen_principal": "remeraNirvana.jpg",
+        "talle": "L"
+    },
+     {
+        "id": 2,
+        "nombre": "Remera Charly Clips Modernos",
+        "precio": 199,
+        "stock": 12,
+        "banda": "Charly Garcia",
+        "imagen_principal": "remeraCharly.jpg",
+        "talle": "L"
+    },
+    {
+        "id": 3,
+        "nombre": "Remera Guns and Roses",
+        "precio": 199,
+        "stock": 12,
+        "banda": "Guns and Roses",
+        "imagen_principal": "remeraGuns.jpg",
+        "talle": "M"
+    },
+    {
+        "id": 4,
+        "nombre": "Remera Pearl Jam",
+        "precio": 199,
+        "stock": 12,
+        "banda": "Pearl Jam",
+        "imagen_principal": "remeraPearljam.jpg",
+        "talle": "XL"
+    },
+    {
+        "id": 5,
+        "nombre": "Remera RadioHead",
+        "precio": 199,
+        "stock": 12,
+        "banda": "RadioHead",
+        "imagen_principal": "remeraRadio.jpg",
+        "talle": "L"
+    },
+    {
+        "id": 6,
+        "nombre": "Remera Red Hot",
+        "precio": 199,
+        "stock": 12,
+        "banda": "Red Hot Chili Peppers",
+        "imagen_principal": "remeraRedhot.jpg",
+        "talle": "L"
+    },
+    {
+        "id": 7,
+        "nombre": "Remera Soda Stereo",
+        "precio": 199,
+        "stock": 12,
+        "banda": "Soda Stereo",
+        "imagen_principal": "remeraSoda.jpg",
+        "talle": "S"
+    },
+    {
+        "id": 8,
+        "nombre": "Remera Collective Soul",
+        "precio": 199,
+        "stock": 12,
+        "banda": "Collective Soul",
+        "imagen_principal": "remeraCollective.jpg",
+        "talle": "S"
+    },
+     {
+        "id": 9,
+        "nombre": "Remera Stone Temple Pilots",
+        "precio": 99,
+        "stock": 18,
+        "banda": "Stone Temple Pilots",
+        "imagen_principal": "remeraStoneTemple.jpg",
+        "talle": "S"
+    }
+]

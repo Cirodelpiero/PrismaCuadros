@@ -1,0 +1,413 @@
+.header-principal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 210px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 5px 30px;
+
+    background: rgba(0, 0, 0, 0.95);
+
+    z-index: 1050;
+}
+
+.logo-header {
+    width: 200px;
+}
+
+.buscador-header {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.buscador-header form {
+    width: 80%;
+    max-width: 700px;
+}
+
+.acciones-header {
+    width: 220px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.accion-header {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    gap: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.acciones-header {
+    min-width: 350px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-vinyl {
+    width: 220px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid darkgoldenrod;
+}
+
+h1 {
+
+    color: #8b6508;
+
+}
+
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #000;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+    padding: 265px 0 0 0;
+    background-image: url("/static/img/Gemini_Generated_Image_k8rtrtk8rtrtk8rt.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.sidebar {
+    position: sticky;
+    top: 20px;
+    background-color: transparent;
+    padding: 20px;
+    align-self: flex-start;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.sidebar a:hover {
+    color: #0d6efd;
+}
+
+.sidebar-whatsapp {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.sidebar-whatsapp a {
+    display: inline-block;
+    text-decoration: none;
+    color: #25D366;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sidebar-whatsapp i {
+    font-size: 40px;
+    margin-right: 8px;
+}
+
+/* Carrusel principal */
+.mySwiper {
+    width: 70%;
+    height: 300px;
+}
+
+.mySwiper .swiper-slide {
+    text-align: center;
+    background: #640707;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mySwiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+/* Carrusel destacados */
+.destacadosSwiper {
+    width: 90%;
+    height: 350px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.destacadosSwiper .swiper-wrapper {
+    align-items: stretch;
+}
+
+.destacadosSwiper .swiper-slide {
+    height: 350px;
+    background: transparent;
+    overflow: hidden;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.destacadosSwiper .swiper-slide a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.destacadosSwiper .swiper-slide img {
+    display: block;
+    width: 100% !important;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+.card-img-top {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+
+.card {
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+
+}
+
+
+
+
+.card:hover {
+
+    transform: scale(1.03);
+
+}
+
+.menu-navbar {
+    position: fixed;
+    top: 210px;
+    left: 0;
+
+    width: 100%;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.95);
+
+    z-index: 1049;
+}
+
+.menu-navbar .nav-link {
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+
+.menu-navbar .nav-link:hover {
+
+    color: #8b6508;
+
+}
+
+.titulo-seccion {
+
+    color: #8b6508;
+
+    text-shadow: 3px 3px 8px black;
+
+    font-weight: bold;
+
+    margin-top: 150px;
+
+}
+
+.btn-ver-cuadro {
+    background: transparent;
+    color: #222;
+    border: 2px solid #222;
+    border-radius: 25px;
+    padding: 10px 18px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-ver-cuadro:hover {
+    background: #222;
+    color: white;
+}
+
+
+.btn-comprar-cuadro {
+    background: linear-gradient(135deg,
+            #ffe680 0%,
+            #d4af37 50%,
+            #aa771c 100%);
+
+    color: black;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 22px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-comprar-cuadro:hover {
+    background: linear-gradient(135deg,
+            #fff0a0 0%,
+            #e6c34a 50%,
+            #c28b22 100%);
+
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.45);
+}
+
+.titulo-destacados {
+    background: linear-gradient(135deg,
+            #ffe680 0%,
+            #d4af37 50%,
+            #aa771c 100%);
+
+    color: black;
+    padding: 12px 35px;
+    border-radius: 8px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: none;
+}
+
+
+/* TARJETA MI CUENTA */
+
+.formulario-card {
+    background: rgba(255, 255, 255, 0.88);
+    color: #222;
+
+    width: 100%;
+    max-width: 520px;
+
+    padding: 20px 35px;
+
+    border-radius: 20px;
+    border: 2px solid #d4af37;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(212, 175, 55, 0.25);
+}
+
+
+/* ICONO */
+
+.icono-cuenta {
+    font-size: 70px;
+    color: #b8860b;
+}
+
+
+/* TITULO */
+
+.formulario-card h1 {
+    color: #111;
+    font-weight: 700;
+}
+
+
+/* CAJA DE DATOS */
+
+.datos-cuenta {
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 15px;
+
+    padding: 5px 20px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* CADA DATO */
+
+.dato-cuenta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.dato-cuenta:last-child {
+    border-bottom: none;
+}
+
+
+/* NOMBRE DEL CAMPO */
+
+.dato-cuenta span {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* DATO DEL USUARIO */
+
+.dato-cuenta strong {
+    color: #111;
+    font-size: 16px;
+    text-align: right;
+}
+
+.bienvenida-usuario {
+    color: #d4af37;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+}
