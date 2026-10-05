@@ -817,3 +817,67 @@ body {
         margin-right: auto;
     }
 }
+
+/* Ajustes de tarjetas para celular y tablet */
+@media (max-width: 991px) {
+
+    .card-body {
+        padding: 10px;
+    }
+
+    .card-body .btn {
+        font-size: 13px;
+        padding: 7px 8px;
+        width: 100%;
+        white-space: normal;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-text {
+        font-size: 13px;
+    }
+}
+
+/* Ajuste extra para celular */
+@media (max-width: 576px) {
+
+    .card-body {
+        padding: 8px;
+    }
+
+    .card-body .btn {
+        font-size: 12px;
+        padding: 6px 4px;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+}
+
+/* Imágenes de productos en celular y tablet */
+@media (max-width: 991px) {
+
+    .card-img-top {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 2;
+        object-fit: contain;
+        background-color: #000;
+    }
+}
+
+/* Igualar contenido de las tarjetas y alinear botones abajo */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* El bloque de botones siempre se va al fondo */
+.card-body > .d-flex {
+    margin-top: auto !important;
+}
