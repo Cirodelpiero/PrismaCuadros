@@ -881,3 +881,17 @@ body {
 .card-body > .d-flex {
     margin-top: auto !important;
 }
+
+/* Botones de tarjetas en PC - 4 cuadros por fila */
+@media (min-width: 992px) {
+
+    .card-body .d-flex {
+        gap: 6px !important;
+    }
+
+    .card-body .btn {
+        font-size: 13px;
+        padding: 9px 10px;
+        white-space: nowrap;
+    }
+}
