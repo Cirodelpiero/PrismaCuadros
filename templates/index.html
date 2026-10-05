@@ -298,10 +298,11 @@
 
                   {% if opcion.id_medida == 1 %}
 
-                  {{ opcion.medida.ancho }} × {{ opcion.medida.alto }} cm
-                  <br>
-                  ${{ "{:,.0f}".format(opcion.precio).replace(",", ".") }}
 
+                  <br>
+                  <strong class="precio-cuadro">
+                    ${{ "{:,.0f}".format(opcion.precio).replace(",", ".") }}
+                  </strong>
                   {% endif %}
 
                   {% endfor %}
@@ -311,7 +312,7 @@
                   <a href="{{ url_for('ver_cuadro', id_cuadro=cuadro.id_cuadro) }}" class="btn btn-ver-cuadro">
 
                     <i class="fa-regular fa-eye"></i>
-                    Ver detalles
+                    Ver
 
                   </a>
 
@@ -319,7 +320,7 @@
             '{{ cuadro.id_cuadro }}',
             '{{ cuadro.nombre }}'
         )">
-                    <i class="fa-solid fa-bag-shopping"></i>
+
                     Comprar
                   </button>
 

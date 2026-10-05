@@ -92,8 +92,8 @@ body {
 }
 
 .sidebar {
-    position: sticky;
-    top: 280px;
+    position: relative;
+    top: auto;
     background-color: transparent;
     padding: 20px;
     align-self: flex-start;
@@ -512,7 +512,7 @@ body {
         align-items: center;
         justify-content: flex-end;
 
-        gap: 0;
+        gap: 15;
 
         z-index: 2;
     }
@@ -521,14 +521,22 @@ body {
     /* Ocultamos usuario / ingresar del header móvil */
 
     .acciones-header .bienvenida-usuario {
-        display: none;
-    }
+    display: block;
+    font-size: 12px;
+    color: #d4af37;
+    white-space: nowrap;
+}
 
     .acciones-header a[href="/mi-cuenta"],
     .acciones-header a[href="/login"] {
-        display: none;
+        display: flex;
     }
 
+    /* Ocultamos las palabras "Ingresar" / "Mi cuenta" */
+    .acciones-header a[href="/mi-cuenta"] span,
+    .acciones-header a[href="/login"] span {
+        display: none;
+    }
 
     /* Carrito */
 
@@ -802,7 +810,7 @@ body {
 
 @media (max-width: 991px) {
 
-    .container-fluid > .row {
+    .container-fluid>.row {
         justify-content: center;
     }
 
@@ -859,14 +867,24 @@ body {
 }
 
 /* Imágenes de productos en celular y tablet */
+/* Imágenes de productos en celular y tablet */
 @media (max-width: 991px) {
 
     .card-img-top {
         width: 100%;
-        height: auto;
-        aspect-ratio: 3 / 2;
-        object-fit: contain;
-        background-color: #000;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+/* Celular: imagen grande dentro de las 2 columnas */
+@media (max-width: 576px) {
+
+    .card-img-top {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
     }
 }
 
@@ -878,7 +896,7 @@ body {
 }
 
 /* El bloque de botones siempre se va al fondo */
-.card-body > .d-flex {
+.card-body>.d-flex {
     margin-top: auto !important;
 }
 
@@ -894,4 +912,60 @@ body {
         padding: 9px 10px;
         white-space: nowrap;
     }
+}
+
+
+
+/* MOBILE - contenido del mismo ancho que la imagen */
+@media (max-width: 576px) {
+
+    .card {
+        width: 100%;
+    }
+
+    .card-img-top {
+        width: 100%;
+        display: block;
+    }
+
+    .card-body {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px;
+    }
+
+    .card-body>.d-flex {
+        width: 100%;
+        gap: 5px !important;
+    }
+
+    .card-body .btn {
+        flex: 1;
+        min-width: 0;
+        padding: 6px 3px;
+        font-size: 11px;
+    }
+}
+
+/* Mantener alineados nombre, precio y botones */
+.card-body h5 {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 576px) {
+
+    .card-body h5 {
+        min-height: 60px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+.precio-cuadro {
+    font-weight: 900;
+    font-size: 18px;
 }
