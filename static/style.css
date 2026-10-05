@@ -93,7 +93,7 @@ body {
 
 .sidebar {
     position: sticky;
-    top: 20px;
+    top: 280px;
     background-color: transparent;
     padding: 20px;
     align-self: flex-start;
@@ -410,4 +410,410 @@ body {
     font-size: 16px;
     font-weight: 600;
     white-space: nowrap;
+}
+
+
+/* =====================================================
+   HEADER RESPONSIVE - TABLET Y CELULAR
+   ===================================================== */
+
+/* =====================================================
+   HEADER - TABLET Y CELULAR
+   ===================================================== */
+
+@media (max-width: 991px) {
+
+    .header-principal {
+        height: 100px;
+        padding: 0 18px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    /* =========================
+       LOGO CENTRADO
+       ========================= */
+
+    .logo-header {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: auto;
+        z-index: 1;
+    }
+
+    .logo-vinyl {
+        width: 85px;
+        height: 85px;
+
+        border-width: 2px;
+    }
+
+
+    /* =========================
+       BUSCADOR A LA IZQUIERDA
+       ========================= */
+
+    .buscador-header {
+        flex: none;
+        width: auto;
+
+        display: flex;
+        justify-content: flex-start;
+
+        z-index: 2;
+    }
+
+    .buscador-header form {
+        width: auto;
+    }
+
+    .buscador-header .input-group {
+        width: auto;
+    }
+
+
+    /* Ocultamos la caja de texto */
+    .buscador-header input {
+        display: none;
+    }
+
+
+    /* Dejamos solamente la lupa */
+    .btn-lupa-header {
+        width: 42px;
+        height: 42px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50% !important;
+
+        font-size: 18px;
+    }
+
+
+    /* =========================
+       ACCIONES A LA DERECHA
+       ========================= */
+
+    .acciones-header {
+        width: auto;
+        min-width: 0;
+
+        margin-left: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        gap: 0;
+
+        z-index: 2;
+    }
+
+
+    /* Ocultamos usuario / ingresar del header móvil */
+
+    .acciones-header .bienvenida-usuario {
+        display: none;
+    }
+
+    .acciones-header a[href="/mi-cuenta"],
+    .acciones-header a[href="/login"] {
+        display: none;
+    }
+
+
+    /* Carrito */
+
+    .acciones-header .accion-header {
+        font-size: 25px;
+        gap: 3px;
+    }
+
+    #contador-carrito {
+        font-size: 11px;
+    }
+
+
+    /* =========================
+       MENÚ
+       ========================= */
+
+    .menu-navbar {
+        top: 100px;
+    }
+
+
+    body {
+        padding-top: 155px;
+    }
+}
+
+/* Botón hamburguesa oculto en PC */
+.boton-menu-movil {
+    display: none;
+}
+
+
+/* =====================================================
+   MENÚ TABLET Y CELULAR
+   ===================================================== */
+
+@media (max-width: 991px) {
+
+    .menu-navbar {
+        top: 100px;
+        height: 55px;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        padding: 0 18px;
+    }
+
+
+    /* MOSTRAR HAMBURGUESA */
+
+    .boton-menu-movil {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        color: white;
+        font-size: 27px;
+
+        border: none;
+        background: transparent;
+
+        padding: 5px;
+    }
+
+
+    /* MENÚ DESPLEGADO */
+
+    #menuPrisma {
+        position: absolute;
+
+        top: 55px;
+        left: 0;
+
+        width: 100%;
+
+        background: rgba(0, 0, 0, 0.97);
+
+        padding: 15px 0 20px;
+
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.35);
+    }
+
+
+    #menuPrisma .nav {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        text-align: center;
+    }
+
+
+    #menuPrisma .nav-link {
+        display: block;
+
+        padding: 13px 20px;
+
+        color: white;
+        font-size: 18px;
+    }
+
+
+    #menuPrisma .nav-link:hover {
+        color: #d4af37;
+    }
+}
+
+
+/* =====================================================
+   PC
+   ===================================================== */
+
+@media (min-width: 992px) {
+
+    #menuPrisma {
+        display: flex !important;
+        justify-content: center;
+
+        width: 100%;
+    }
+}
+
+/* =========================================
+   FILTROS
+   ========================================= */
+
+.btn-filtros-movil {
+    display: none;
+}
+
+
+/* PC: filtros siempre visibles */
+
+@media (min-width: 992px) {
+
+    .filtros-contenido {
+        display: block !important;
+    }
+
+}
+
+
+/* =========================================
+   FILTROS TABLET Y CELULAR
+   ========================================= */
+
+@media (max-width: 991px) {
+
+    .sidebar {
+        position: relative;
+        top: auto;
+
+        width: 100%;
+        padding: 0 15px;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* BOTÓN FILTROS */
+
+    .btn-filtros-movil {
+        display: flex;
+
+        width: 100%;
+
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 12px 18px;
+
+        background: rgba(0, 0, 0, 0.95);
+        color: #d4af37;
+
+        border: 1px solid #d4af37;
+        border-radius: 10px;
+
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+
+    /* CAJA QUE SE DESPLIEGA */
+
+    .filtros-contenido {
+        margin-top: 8px;
+
+        padding: 15px;
+
+        background: rgba(255, 255, 255, 0.95);
+
+        border-radius: 10px;
+    }
+
+
+    .filtros-contenido h4 {
+        color: #111;
+        font-size: 18px;
+    }
+
+
+    .filtros-contenido .list-group-item {
+        padding: 10px 12px;
+    }
+
+
+    .sidebar-whatsapp {
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+
+}
+
+/* WHATSAPP FLOTANTE */
+
+.whatsapp-flotante {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #25D366;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 34px;
+    text-decoration: none;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+
+    z-index: 2000;
+
+    transition: transform 0.2s ease;
+}
+
+.whatsapp-flotante:hover {
+    color: white;
+    transform: scale(1.08);
+}
+
+
+/* CELULAR */
+
+@media (max-width: 991px) {
+
+    .whatsapp-flotante {
+        width: 52px;
+        height: 52px;
+
+        right: 15px;
+        bottom: 15px;
+
+        font-size: 29px;
+    }
+
+}
+
+/* CENTRAR CATÁLOGO EN TABLET Y CELULAR */
+
+@media (max-width: 991px) {
+
+    .container-fluid > .row {
+        justify-content: center;
+    }
+
+    .card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card-img-top {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

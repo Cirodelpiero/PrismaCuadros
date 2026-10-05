@@ -35,7 +35,7 @@
 
           <input type="text" class="form-control" name="q" placeholder="Buscar cuadros...">
 
-          <button class="btn btn-warning" type="submit">
+          <button class="btn btn-warning btn-lupa-header" type="submit">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
 
@@ -81,31 +81,48 @@
     </div>
   </header>
 
-  <ul class="nav justify-content-center menu-navbar">
+  <nav class="menu-navbar">
 
-    <li class="nav-item">
-      <a class="nav-link" href="/cuadros">Cuadros</a>
-    </li>
+    <!-- Botón hamburguesa: solo celular/tablet -->
+    <button class="navbar-toggler boton-menu-movil" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrisma"
+      aria-controls="menuPrisma" aria-expanded="false" aria-label="Abrir menú">
 
-    <li class="nav-item">
-      <a class="nav-link" href="#contacto">Contacto</a>
-    </li>
+      <i class="fa-solid fa-bars"></i>
 
-    <li class="nav-item">
-      <a class="nav-link" href="#comprar">Cómo comprar</a>
-    </li>
+    </button>
 
-    {% if usuario and usuario.rol == "admin" %}
 
-    <li class="nav-item">
-      <a class="nav-link" href="/dashboard">
-        Dashboard
-      </a>
-    </li>
+    <div class="collapse navbar-collapse" id="menuPrisma">
 
-    {% endif %}
+      <ul class="nav justify-content-center">
 
-  </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="/cuadros">Cuadros</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#contacto">Contacto</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#comprar">Cómo comprar</a>
+        </li>
+
+        {% if usuario and usuario.rol == "admin" %}
+
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard">
+            Dashboard
+          </a>
+        </li>
+
+        {% endif %}
+
+      </ul>
+
+    </div>
+
+  </nav>
 
   <div class="swiper mySwiper">
 
@@ -173,42 +190,64 @@
     <div class="swiper-button-prev destacados-prev"></div>
 
   </div>
+
   <div class="container-fluid mt-5">
     <div class="row">
-      <!-- Sidebar -->
+
+      <!-- Sidebar / Filtros -->
       <div class="col-md-2 sidebar">
 
-        <h4>Categorías</h4>
+        <!-- Botón visible solo en celular/tablet -->
+        <button class="btn-filtros-movil" type="button" data-bs-toggle="collapse" data-bs-target="#filtrosPrisma"
+          aria-expanded="false" aria-controls="filtrosPrisma">
 
-        <ul class="list-group">
+          <i class="fa-solid fa-sliders"></i>
+          Filtros
 
-          {% for categoria in categorias %}
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
 
-          <li class="list-group-item">
 
-            <a href="{{ url_for('ver_categoria', id_categoria=categoria.id_categoria) }}">
-              {{ categoria.nombre }}
-            </a>
+        <div class="collapse filtros-contenido" id="filtrosPrisma">
 
-          </li>
+          <h4>Categorías</h4>
 
-          {% endfor %}
+          <ul class="list-group">
 
-        </ul>
+            {% for categoria in categorias %}
 
-        <h4>Medidas</h4>
+            <li class="list-group-item">
 
-        <ul class="list-group">
+              <a href="{{ url_for('ver_categoria', id_categoria=categoria.id_categoria) }}">
+                {{ categoria.nombre }}
+              </a>
 
-          <li class="list-group-item"><a href="/medida/40x60">40 x 60 cm</a></li>
+            </li>
 
-          <li class="list-group-item"><a href="/medida/60x90">60 x 90 cm</a></li>
-        </ul>
-        <div class="sidebar-whatsapp">
-          <a href="https://wa.me/5492234224211" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp
-          </a>
+            {% endfor %}
+
+          </ul>
+
+
+          <h4 class="mt-4">Medidas</h4>
+
+          <ul class="list-group">
+
+            <li class="list-group-item">
+              <a href="/medida/40x60">40 x 60 cm</a>
+            </li>
+
+            <li class="list-group-item">
+              <a href="/medida/60x90">60 x 90 cm</a>
+            </li>
+
+          </ul>
+
+
+
+
         </div>
+
       </div>
 
       <!-- Contenido -->
@@ -223,7 +262,7 @@
 
           {% for cuadro in cuadros %}
 
-          <div class="col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4">
 
             <div class="card h-100 shadow-lg">
 
@@ -233,11 +272,19 @@
               %}
 
               {% if imagen_principal %}
-              <img src="{{ url_for('static', filename='img/imgCuadros/' ~ imagen_principal.ruta_imagen) }}"
-                class="card-img-top" alt="{{ cuadro.nombre }}">
+
+              <a href="{{ url_for('ver_cuadro', id_cuadro=cuadro.id_cuadro) }}">
+                <img src="{{ url_for('static', filename='img/imgCuadros/' ~ imagen_principal.ruta_imagen) }}"
+                  class="card-img-top" alt="{{ cuadro.nombre }}">
+              </a>
+
               {% else %}
-              <img src="{{ url_for('static', filename='img/sin-imagen.jpg') }}" class="card-img-top"
-                alt="Sin imagen disponible">
+
+              <a href="{{ url_for('ver_cuadro', id_cuadro=cuadro.id_cuadro) }}">
+                <img src="{{ url_for('static', filename='img/sin-imagen.jpg') }}" class="card-img-top"
+                  alt="Sin imagen disponible">
+              </a>
+
               {% endif %}
 
               <div class="card-body text-center">
@@ -338,7 +385,12 @@
         </div>
 
       </div>
+      <a href="https://wa.me/5492234224211" class="whatsapp-flotante" target="_blank"
+        aria-label="Contactar por WhatsApp">
 
+        <i class="fa-brands fa-whatsapp"></i>
+
+      </a>
       <section id="comprar" class="container mt-5 text-center">
 
         <h2>Cómo comprar</h2>
@@ -451,9 +503,9 @@
           {% for opcion in cuadro.medidas_disponibles %}
 
         {
-          id: {{ opcion.id_cuadro_medida }},
+          id: { { opcion.id_cuadro_medida } },
           medida: "{{opcion.medida.ancho|int}} × {{opcion.medida.alto|int }} cm",
-            precio: {{ opcion.precio | int }}
+            precio: { { opcion.precio | int } }
         } {% if not loop.last %}, {% endif %}
 
         {% endfor %}
